@@ -1,7 +1,6 @@
 package com.kocerlabs.weatherapp.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
@@ -9,7 +8,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.kocerlabs.weatherapp.R
 import com.kocerlabs.weatherapp.databinding.ActivityHomeBinding
 import com.kocerlabs.weatherapp.ui.base.BaseActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     private val TAG = "HomeActivity"
 
@@ -26,10 +27,6 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-
-        binding.fragmentContainerView.setOnClickListener {
-            Log.d(TAG,"hello")
         }
     }
 
