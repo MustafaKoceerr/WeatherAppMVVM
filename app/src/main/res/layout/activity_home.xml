@@ -9,7 +9,6 @@
 
 
     <androidx.fragment.app.FragmentContainerView
-        android:layout_margin="8dp"
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"

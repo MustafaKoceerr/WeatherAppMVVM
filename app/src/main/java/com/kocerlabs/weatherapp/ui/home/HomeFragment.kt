@@ -25,9 +25,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.textView.setOnClickListener {
-            viewModel.getCurrentWeather(11.0, 11.0, "standard", KEY)
-        }
+
     }
 
 
