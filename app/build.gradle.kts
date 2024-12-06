@@ -54,7 +54,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(files("libs/LeonidsLib-1.3.2.jar"))
 
     // Lifecycle Aware Components
     val lifecycle_version = "2.8.7"
@@ -107,8 +106,8 @@ dependencies {
 
 
     // HILT
-    implementation("com.google.dagger:hilt-android:2.49")
-    ksp("com.google.dagger:hilt-android-compiler:2.49")
+    implementation("com.google.dagger:hilt-android:2.53")
+    ksp("com.google.dagger:hilt-android-compiler:2.53")
     implementation("androidx.hilt:hilt-navigation-fragment:1.2.0")
 
 
@@ -121,6 +120,8 @@ dependencies {
 
     implementation("com.github.Dimezis:BlurView:version-2.0.5")
 
-    implementation("com.github.MatteoBattilana:WeatherView:3.0.0")
+    // kütüphane dependency'si hata çıkartıyor.
+//    implementation("com.github.MatteoBattilana:WeatherView:3.0.0")
+
 
 }
