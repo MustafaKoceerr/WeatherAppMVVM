@@ -8,6 +8,7 @@ import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor() {
 
+
     private val BASE_URL = "https://api.openweathermap.org"
     private val client = OkHttpClient.Builder()
         .connectTimeout(60, TimeUnit.SECONDS)
@@ -15,12 +16,17 @@ class RemoteDataSource @Inject constructor() {
         .writeTimeout(60, TimeUnit.SECONDS)
         .build()
 
+
     fun <Api> buildApi(
         api: Class<Api>,
-    ): Api = Retrofit.Builder()
-        .client(client)
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-        .create(api)
+    ): Api {
+        return Retrofit.Builder()
+            .client(client)
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(api)
+    }
+
+
 }
