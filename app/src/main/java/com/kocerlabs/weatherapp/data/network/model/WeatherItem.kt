@@ -9,13 +9,13 @@ data class WeatherItem(
     @SerializedName("clouds")
     val clouds: Clouds?,
     @SerializedName("cod")
-    val cod: Int?,
+    val cod: Double?,
     @SerializedName("coord")
     val coord: Coord?,
     @SerializedName("dt")
-    val dt: Int?,
+    val dt: Double?,
     @SerializedName("id")
-    val id: Int?,
+    val id: Double?,
     @SerializedName("main")
     val main: Main?,
     @SerializedName("name")
@@ -25,9 +25,9 @@ data class WeatherItem(
     @SerializedName("sys")
     val sys: Sys?,
     @SerializedName("timezone")
-    val timezone: Int?,
+    val timezone: Double?,
     @SerializedName("visibility")
-    val visibility: Int?,
+    val visibility: Double?,
     @SerializedName("weather")
     val weather: List<Weather?>?,
     @SerializedName("wind")
@@ -35,7 +35,7 @@ data class WeatherItem(
 ) {
     data class Clouds(
         @SerializedName("all")
-        val all: Int?
+        val all: Double?
     )
 
     data class Coord(
@@ -49,13 +49,13 @@ data class WeatherItem(
         @SerializedName("feels_like")
         val feelsLike: Double?,
         @SerializedName("grnd_level")
-        val grndLevel: Int?,
+        val grndLevel: Double?,
         @SerializedName("humidity")
-        val humidity: Int?,
+        val humidity: Double?,
         @SerializedName("pressure")
-        val pressure: Int?,
+        val pressure: Double?,
         @SerializedName("sea_level")
-        val seaLevel: Int?,
+        val seaLevel: Double?,
         @SerializedName("temp")
         val temp: Double?,
         @SerializedName("temp_max")
@@ -73,13 +73,13 @@ data class WeatherItem(
         @SerializedName("country")
         val country: String?,
         @SerializedName("id")
-        val id: Int?,
+        val id: Double?,
         @SerializedName("sunrise")
-        val sunrise: Int?,
+        val sunrise: Double?,
         @SerializedName("sunset")
-        val sunset: Int?,
+        val sunset: Double?,
         @SerializedName("type")
-        val type: Int?
+        val type: Double?
     )
 
     data class Weather(
@@ -88,14 +88,14 @@ data class WeatherItem(
         @SerializedName("icon")
         val icon: String?,
         @SerializedName("id")
-        val id: Int?,
+        val id: Double?,
         @SerializedName("main")
         val main: String?
     )
 
     data class Wind(
         @SerializedName("deg")
-        val deg: Int?,
+        val deg: Double?,
         @SerializedName("gust")
         val gust: Double?,
         @SerializedName("speed")
