@@ -1,6 +1,7 @@
 /build
 
-
+# Ignore KeyObject.kt file
+KeyObject.kt
 # Created by https://www.toptal.com/developers/gitignore/api/kotlin,android,androidstudio,java,git
 # Edit at https://www.toptal.com/developers/gitignore?templates=kotlin,android,androidstudio,java,git
 
