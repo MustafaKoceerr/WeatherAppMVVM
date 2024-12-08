@@ -4,7 +4,7 @@ import com.kocerlabs.weatherapp.data.network.WeatherApi
 import javax.inject.Inject
 
 class WeatherRepository @Inject constructor(
-    private val api: WeatherApi
+    private val api: WeatherApi,
 ) : BaseRepository() {
 
 
@@ -14,4 +14,14 @@ class WeatherRepository @Inject constructor(
         units: String,
         ApiKey: String,
     ) = safeApiCall { api.getCurrentWeather(lat, lon, units, ApiKey) }
+
+
+    suspend fun getForecastWeather(
+        lat: Double,
+        lon: Double,
+        ApiKey: String,
+    ) = safeApiCall { api.getForecastWeather(lat, lon, ApiKey) }
+
+
+
 }
